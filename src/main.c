@@ -12,9 +12,10 @@ uint8_t memory[MEMORY_SIZE];
 
 used_memory_t allocation_table[ALLOC_TABLE_SIZE] = {0};
 
-md_t updated_value = 0, start = 0, count = 0;
-
 md_t alloc(int bytes) {
+    int start = 0;
+    int count = 0;
+
     for (int i = 0; i < ALLOC_TABLE_SIZE; i++) {
         bool is_used = check_index(allocation_table, ALLOC_TABLE_SIZE, i);
         if (is_used) {
