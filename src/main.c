@@ -70,10 +70,5 @@ int main(void) {
     alloc(3);
     alloc(12);
 
-    // printf("%d\n", md1);
-    //
-    // md_t md22 = alloc(200);
-    // printf("%d\n", md22);
-
     return 0;
 }
