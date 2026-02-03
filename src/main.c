@@ -5,11 +5,9 @@
 
 #define MEMORY_SIZE 1024
 #define ALLOC_TABLE_SIZE 100
-
 typedef int md_t; // memory descriptor type
 
 uint8_t memory[MEMORY_SIZE];
-
 used_memory_t allocation_table[ALLOC_TABLE_SIZE] = {0};
 
 md_t alloc(int bytes) {
@@ -17,7 +15,7 @@ md_t alloc(int bytes) {
     int count = 0;
 
     for (int i = 0; i < ALLOC_TABLE_SIZE; i++) {
-        bool is_used = check_index(allocation_table, ALLOC_TABLE_SIZE, i);
+        bool is_used = is_index_used(allocation_table, ALLOC_TABLE_SIZE, i);
         if (is_used) {
             count = 0;
             continue;
