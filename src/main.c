@@ -43,10 +43,6 @@ md_t alloc(int bytes) {
     return 0;
 }
 
-/*void free(md_t md) {
-    allocation_table[md].in_use = false;
-}*/
-
 int main(void) {
     // used_memory_t allocation_table[10] = {0};
     // allocation_table[0].in_use = true;
