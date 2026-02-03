@@ -3,12 +3,12 @@
 #include <stdbool.h>
 
 typedef struct {
-    int address;
-    int bytes;
+    int start;
+    int count;
     bool in_use;  // false -> 0, true -> 1
 } used_memory_t;
 
 int find_free_slot(used_memory_t* table, int size);
-bool check_index (used_memory_t* table, int size, int index);
+bool check_index(used_memory_t* table, int size, int index);
 
 #endif //MALLOC_ALLOCATION_TABLE_H

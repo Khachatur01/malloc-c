@@ -8,6 +8,6 @@ int find_free_slot(used_memory_t* table, int size) {
     return -1;
 }
 
-bool check_index (used_memory_t* table, int size, int index) {
+bool check_index(used_memory_t* table, int size, int index) {
     return false;
 }
